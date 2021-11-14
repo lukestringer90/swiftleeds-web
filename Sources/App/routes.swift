@@ -1,7 +1,8 @@
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { req in
-        return "SwiftLeeds is in maintenance 🚀"
-    }
+    let routes = app.grouped("api", "v1")
+    try routes
+        .grouped("auth")
+        .register(collection: AuthController())
 }
