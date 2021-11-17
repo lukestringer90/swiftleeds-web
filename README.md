@@ -49,9 +49,11 @@ postgres=# \q
 Your database is now setup! 
 
 ### .env
-We also ship with a .env file to protect our production environment and allow for unique development environments. First, start by copying the .env file and renaming the copy to .env.development 
+We also ship with a .env file to protect our production environment and allow for unique development environments. First, start by copying the .env file and renaming the copy to .env.development
 
-With that done, you can now update the values within it. The crucial one is `DB_URL`. If you followed the steps above, your environment variable should likely be the following: 
+With that done, you will also need to setup your custom working directory. There's a brilliant post [here](https://www.timc.dev/posts/custom-working-directory/) that will explain how to do this.
+
+Final, you can now update the values within your .env.development file. The crucial one is `DB_URL`. If you followed the steps above, your environment variable should likely be the following: 
 
 ```
 DB_URL=postgresql://dev:root@localhost/swiftleeds
